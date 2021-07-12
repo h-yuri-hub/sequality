@@ -4,11 +4,20 @@
 package sequality;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+  public String getGreeting() {
+    return "Hello World!";
+  }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+    Calculate c = new Calculate();
+    int x = 2;
+    int y = 3;
+    System.out.println(x+"から"+y+"の合計は" + c.sumAll(x, y) + "です。平均値は" + c.average(x, y) + "です。");
+    x = 1;
+    y = 10;
+    System.out.println(x + "から" + y + "の合計は" + c.sumAll(x, y) + "です。平均値は" + c.average(x, y) + "です。");
+    System.out.println(x + "から" + y + "の奇数の合計は" + c.ki_all(x, y) + "です。偶数の合計は" + c.gu_all(x, y) + "です。");
+
+  }
 }
